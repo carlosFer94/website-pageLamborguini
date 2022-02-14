@@ -24,7 +24,7 @@
 	--z-normal: 1;
 	--z-tooltipe: 10;
 	--z-fixed: 100;
-	--z-modal: hidden;
+	--z-modal: 1000;
 
 	@media screen and (min-width: 768px){
 			--big-font-size:6rem;
@@ -44,6 +44,7 @@ body{
 	margin: 3rem 0 0 0;
 	font-family: var(--body-font);
 	font-weight: initial;
+	background-color: var(--bg-color);
 	overflow: hidden;
 }
 
@@ -140,7 +141,7 @@ p{
 	.nav__toggle{
 		font-size: 1.5rem;
 		cursor: pointer;
-		background-color: yellow;
+		/*background-color: yellow;*/
 	}
 }
 
@@ -200,6 +201,8 @@ p{
 
 
 .box{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	justify-content: center;
 	padding-bottom: 1rem;
@@ -208,8 +211,11 @@ p{
 	background-color: var(--bg-color);
 	color: var(--text-color);
 	box-shadow: 10px 10px 30px #000;
+	border-radius: 1rem;
 	text-align: center;
 }
+
+/*::::medium::::::*/
 .box__medium{
 	width: 150px;
 	height: 150px;
@@ -226,4 +232,20 @@ p{
 }
 .box__medium-detail{
 	font-size: var(--small-font-size);
+}
+
+
+/*::::small::::::*/
+.box__small{
+	width: 70px;
+	height: 70px;
+	padding: 0.75rem 0;
+	margin-bottom: 0.625rem;
+}
+.box__small-title{
+	font-size: var(--small-font-size);
+	color: var(--white-color);
+}
+.box__small-detail{
+	font-size: var(--smaller-font-size);
 }
