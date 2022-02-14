@@ -110,7 +110,8 @@ p{
 @media screen and (max-width: 768px){
 	.nav__menu{
 		position: fixed;
-		top: 3rem;
+		/*top: 3rem;*/
+		top: -100%;
 		left: 0;
 		background-color: var(--bg-color);
 		width: 100%;
@@ -139,5 +140,12 @@ p{
 	.nav__toggle{
 		font-size: 1.5rem;
 		cursor: pointer;
+		background-color: yellow;
 	}
+}
+
+/*::::::::::MOSTRAR MENU::::::::*/
+.show{
+	top: 3rem;
+	z-index: 1;
 }
