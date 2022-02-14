@@ -147,5 +147,44 @@ p{
 /*::::::::::MOSTRAR MENU::::::::*/
 .show{
 	top: 3rem;
-	z-index: 1;
+}
+
+/*:::HOME::::*/
+.main-home{
+	height: calc(100vh - 3rem);
+	padding-left: 1rem;
+	/*background-color: var(--bg-color);*/
+}
+.home{
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr;
+	row-gap: 2.3rem;
+	height: 100%;
+	align-content: flex-end;
+	overflow: hidden;
+}
+.home__title{
+	position: absolute;
+	top: 3%;
+	font-size: var(--big-font-size);
+	writing-mode: vertical-rl;
+	transform: rotate(180deg);
+	color: var(--text-color);
+}
+.home__img{
+	position: absolute;
+	top: 7%;
+	left: 20%;
+	width: 394px;
+	z-index: var(--z-normal);
+}
+.home__information{
+	padding-left: 4.25rem;
+	padding-right: 2rem;
+	color: var(--text-color);
+}
+.home__subtitle{
+	font-size: var(--h2-font-size);
+	color: var(--primer-color);
 }
