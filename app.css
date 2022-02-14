@@ -249,3 +249,25 @@ p{
 .box__small-detail{
 	font-size: var(--smaller-font-size);
 }
+
+
+/*::::::min 768px::::*/
+@media screen and (min-width: 768px){
+	body{
+		margin: 0;
+	}
+	.main-home{
+		height: 100vh;
+		padding: 0;
+	}
+	.nav__list{
+		display: flex;
+	}
+	.nav__item{
+		margin-right: 2rem;
+		margin-bottom: 0;
+	}
+	.nav__toggle{
+		display: none;
+	}
+}
