@@ -97,3 +97,12 @@ p{
 	color: var(--primer-color);
 	z-index: var(--z-fixed);
 }
+
+/*:::::NAV::::::::*/
+.nav{
+	height: 3rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-weight: bold;
+}
