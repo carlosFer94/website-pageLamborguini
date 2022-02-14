@@ -4,7 +4,7 @@
 }
 
 /*-----VARIABLE GENERAL------*/
-$header-height: 3rem;
+/*$header-height: 3rem;*/
 
 :root{
 	--primer-color: #EFD50C;
@@ -24,24 +24,24 @@ $header-height: 3rem;
 	--z-normal: 1;
 	--z-tooltipe: 10;
 	--z-fixed: 100;
-	--z-modal: hidden;;
-
+	--z-modal: hidden;
 
 	@media screen and (min-width: 768px){
-		--big-font-size:6rem;
-		--h2-font-size: 1.5rem;
-		--normal-font-size: 1rem;
-	}
+			--big-font-size:6rem;
+			--h2-font-size: 1.5rem;
+			--normal-font-size: 1rem;
+		}
 
 }
 
 
-*,::before,after:{
-	box-sizing: border-box;
+*,::before, ::after{
+	-webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body{
-	margin: $header-height 0 0 0;
+	margin: 3rem 0 0 0;
 	font-family: var(--body-font);
 	font-weight: initial;
 	overflow: hidden;
@@ -78,4 +78,22 @@ p{
 }
 .d-inline{
 	display: inline-block;
+}
+
+/*HEADER*/
+.bd-grid{
+	display: grid;
+	grid-template-columns: 100%;
+	max-width: 1200px;
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+.l-header{
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: var(--bg-color);
+	color: var(--primer-color);
+	z-index: var(--z-fixed);
 }
