@@ -270,4 +270,31 @@ p{
 	.nav__toggle{
 		display: none;
 	}
+
+	.home{
+		height: 100vh;
+		grid-template-columns: 402px 322px;
+		grid-template-rows: 152px;
+		justify-content: center;
+		padding-bottom: 2rem;
+	}
+	.home__title{
+		top: 23%;
+		left: 0;
+		right: 0;
+		writing-mode: initial;
+		transform: initial;
+		text-align: center;
+	}
+	.home__img{
+		width: 569px;
+		top: 32%;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.home__information{
+		padding: 0;
+	}
 }
