@@ -43,7 +43,7 @@
 
 			<div class="home__information">
 				<h2 class="home__subtitle">LAMBORGHINI<br>GALLARDO LP560</h2>
-				<p class="home__descripction">Lorem ipsum dolor sit amet consect adipiscing elit, commodo tristique id quisque lobortis facilisi feugiat</p>
+				<p class="home__description">Lorem ipsum dolor sit amet consect adipiscing elit, commodo tristique id quisque lobortis facilisi feugiat</p>
 			</div>
 
 			<div class="box">
@@ -84,4 +84,41 @@
 <!----<script type="module" src="lib/ionicons.esm.js"></script>---->
 <script src="app.js"></script>
 <script src="lib/gsap.min.js"></script>
+<script>
+	/*Title y img*/
+	gsap.from('.home__title', {
+		opacity: -1,
+		duration: 1.5,
+		delay:1
+	});
+
+    gsap.from('.home__img', {
+    	opacity: 0,
+    	duration: 1,
+    	delay:1,
+    	x: 100
+    });
+
+    gsap.from('.home__information', {
+    	opacity: 0,
+    	duration: 1,
+    	delay:1.2,
+    	y: -30
+    });
+
+	/*:::::box:::*/
+	gsap.from('.box__medium', {
+		opacity: 0,
+		duration: 1.5,
+		delay:1.3,
+		y: -50
+	});
+
+    gsap.from('.box__small', {
+    	opacity: -1,
+    	duration: 1.5,
+    	delay:1.4,
+    	y: -50
+    });
+</script>
 </html>
