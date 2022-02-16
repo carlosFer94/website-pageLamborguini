@@ -26,17 +26,18 @@
 	--z-fixed: 100;
 	--z-modal: 1000;
 
-	@media screen and (min-width: 768px){
-			--big-font-size:6rem;
-			--h2-font-size: 1.5rem;
-			--normal-font-size: 1rem;
-		}
-
 }
 
+@media screen and (min-width: 768px){
+			:root{
+				--big-font-size:6rem;
+				--h2-font-size: 1.5rem;
+				--normal-font-size: 1rem;
+			}
+		}
 
 *,::before, ::after{
-	-webkit-box-sizing: border-box;
+	--webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -102,8 +103,11 @@ p{
 /*:::::NAV::::::::*/
 .nav{
 	height: 3rem;
+	--webkit-display: flex;
 	display: flex;
+	--webkit-box-pack: justify;
 	justify-content: space-between;
+	--webkit-box-align: center;
 	align-items: center;
 	font-weight: bold;
 }
@@ -119,7 +123,9 @@ p{
 		height: 40%;
 		padding: 2rem;
 		border-radius: 0 0 1rem 1rem;
-		box-shadow: 10px 10px 10px #000000;
+		--webkit-box-shadow: 10px 10px 10px #000;
+		box-shadow: 10px 10px 10px #000;
+		--webkit-transition: .5s;
 		transition: .5s;
 	}
 	.nav__list{
@@ -129,7 +135,7 @@ p{
 		margin-bottom: 1.5rem;
 	}
 	.nav__link{
-		padding: 5rem;
+		padding: .5rem;
 		color: var(--text-color);
 	}
 	.nav__link:hover{
@@ -154,7 +160,7 @@ p{
 .main-home{
 	height: calc(100vh - 3rem);
 	padding-left: 1rem;
-	/*background-color: var(--bg-color);*/
+	background-color: var(--bg-color);
 }
 .home{
 	position: relative;
@@ -169,7 +175,9 @@ p{
 	position: absolute;
 	top: 3%;
 	font-size: var(--big-font-size);
+	--webkit-writing-mode: vertical-rl;
 	writing-mode: vertical-rl;
+	--webkit-transform: rotate(180deg);
 	transform: rotate(180deg);
 	color: var(--text-color);
 }
@@ -201,15 +209,16 @@ p{
 
 
 .box{
-	display: -webkit-box;
-	display: -ms-flexbox;
+	--webkit-display: flex;
 	display: flex;
+	--webkit-box-pack: center;
 	justify-content: center;
 	padding-bottom: 1rem;
 }
 .box--dark{
 	background-color: var(--bg-color);
 	color: var(--text-color);
+	--webkit-box-shadow: 10px 10px 30px #000;
 	box-shadow: 10px 10px 30px #000;
 	border-radius: 1rem;
 	text-align: center;
@@ -219,7 +228,7 @@ p{
 .box__medium{
 	width: 150px;
 	height: 150px;
-	padding: 1.5rem 0.75rem;
+	padding: 1.5rem .75rem;
 	margin-right: 2rem;
 }
 .box__medium-title{
@@ -228,7 +237,7 @@ p{
 }
 .box__medium-description{
 	font-size: var(--normal-font-size);
-	margin-bottom: 0.5rem;
+	margin-bottom: .5rem;
 }
 .box__medium-detail{
 	font-size: var(--small-font-size);
@@ -239,7 +248,7 @@ p{
 .box__small{
 	width: 70px;
 	height: 70px;
-	padding: 0.75rem 0;
+	padding: .75rem 0;
 	margin-bottom: 0.625rem;
 }
 .box__small-title{
@@ -261,6 +270,8 @@ p{
 		padding: 0;
 	}
 	.nav__list{
+		display: -webkit-box;
+		--webkit-display: flex;
 		display: flex;
 	}
 	.nav__item{
@@ -275,6 +286,7 @@ p{
 		height: 100vh;
 		grid-template-columns: 402px 322px;
 		grid-template-rows: 152px;
+		--webkit-box-pack: center;
 		justify-content: center;
 		padding-bottom: 2rem;
 	}
@@ -282,7 +294,9 @@ p{
 		top: 23%;
 		left: 0;
 		right: 0;
+		--webkit-writing-mode: initial;
 		writing-mode: initial;
+		--webkit-transform: initial;
 		transform: initial;
 		text-align: center;
 	}
